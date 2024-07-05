@@ -1,0 +1,20 @@
+{
+  "name": "Michos checkin",
+  "description": "Checkin extention for Michos's games by Nyaruko",
+  "version": "1.0",
+  "host_permissions": [
+    "*://*.hoyolab.com/*"
+  ],
+  "permissions": [
+    "webRequest",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Click To Checkin"
+  },
+  "manifest_version": 3
+}
