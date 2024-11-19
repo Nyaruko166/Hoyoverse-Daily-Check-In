@@ -19,7 +19,7 @@ const MichosGames = [
   },
   {
     name: "Zenless Zone Zero",
-    api: "https://sg-act-nap-api.hoyolab.com/event/luna/zzz/os/sign",
+    api: "https://sg-public-api.hoyolab.com/event/luna/zzz/os/sign",
     actId: "e202406031448091",
     iconUrl: "img/zzz.png",
   },
@@ -49,7 +49,13 @@ const checkIn = async (game) => {
   }
 
   try {
+    const zzzHeaders = new Headers();
+    if (game.name === "Zenless Zone Zero") {
+      zzzHeaders.append("x-rpc-signgame", "zzz");
+    }
+
     const response = await fetch(game.api, {
+      headers: zzzHeaders,
       method: "POST",
       body: JSON.stringify({ act_id: game.actId }),
     });
