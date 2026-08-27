@@ -1,11 +1,18 @@
 {
-  "name": "Michos checkin",
-  "description": "Checkin extention for Michos's games by Nyaruko",
-  "version": "1.0",
+  "name": "Gacha game checkin",
+  "description": "Checkin extention for multiple gacha games by Nyaruko",
+  "version": "2.1",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
   "host_permissions": [
-    "*://*.hoyolab.com/*"
+    "*://*.hoyolab.com/*",
+    "*://*.skport.com/*"
   ],
   "permissions": [
+    "storage",
     "webRequest",
     "notifications"
   ],
@@ -14,7 +21,7 @@
   },
   "action": {
     "default_icon": "img/icon.png",
-    "default_title": "Click To Checkin"
+    "default_title": "Click To Check In"
   },
   "manifest_version": 3
 }
